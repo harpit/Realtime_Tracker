@@ -1,4 +1,4 @@
-const socket = io("/api", {
+const socket = io("/", {
     transports: ["polling"]
 });
 
