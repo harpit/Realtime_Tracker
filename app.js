@@ -8,7 +8,6 @@ const socketio = require('socket.io');
 const server = http.createServer(app);
 const io = socketio(server, {
     cors: {
-        origin: "*", // Allow all origins (or specify your frontend domain)
         methods: ["GET", "POST"]
     }
 });
