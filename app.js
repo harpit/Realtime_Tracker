@@ -6,7 +6,12 @@ const http = require('http');
 
 const socketio = require('socket.io');
 const server = http.createServer(app);
-const io = socketio(server)
+const io = socketio(server, {
+    cors: {
+        origin: "*", // Allow all origins (or specify your frontend domain)
+        methods: ["GET", "POST"]
+    }
+});
 
 app.set("views", path.join(__dirname, "views"));
 app.set('view engine' , "ejs" )

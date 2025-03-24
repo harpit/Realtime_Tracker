@@ -1,4 +1,6 @@
-const socket = io();
+const socket = io("/api", {
+    transports: ["polling"]
+});
 
 if(navigator.geolocation){
     navigator.geolocation.watchPosition(
